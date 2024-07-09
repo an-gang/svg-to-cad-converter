@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>svg to cad转换工具 作者：安神补脑液</title>
+    <style>
+        #panel {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 100%) scale(1.5);
+            height: 5vh;
+        }
+
+        #output {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 95vw;
+            height: 85vh;
+            transform: translate(-50%, 0);
+            overflow: auto;
+            border: 1px black solid;
+        }
+
+        #temp {
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="converter.js"></script>
+</head>
+<body>
+<div id="panel">
+    <input id="source" type="file" accept="text/html"/>
+    <button id="confirm" type="button">转换</button>
+    <button id="copy" type="button">复制</button>
+</div>
+<textarea readonly id="output" title="" contenteditable="false"></textarea>
+<div id="temp"></div>
+</body>
+</html>
